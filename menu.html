@@ -1,3 +1,4 @@
+<!-- menu.html (updated: quick-jump anchors + Top picks card + correct phone + header has Menu/Home) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -192,8 +193,9 @@
   <div class="nav">
     <a href="index.html" aria-label="Back to home"><b>Bollo’s</b></a>
     <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">
+      <a class="btn" href="index.html">Home</a>
       <a class="btn" href="index.html#visit">Directions</a>
-      <a class="btn primary" href="tel:+1XXXXXXXXXX">Call</a>
+      <a class="btn primary" href="tel:+1(540) 953-1669">Call</a>
     </div>
   </div>
 </header>
@@ -203,6 +205,14 @@
   <p class="sub">
     Short and clean for the demo. The full menu can be added with photos and updates anytime.
   </p>
+
+  <!-- quick jumps -->
+  <div class="cta" style="margin-top:10px">
+    <a class="btn" href="#top-picks">Top picks</a>
+    <a class="btn" href="#coffee">Coffee</a>
+    <a class="btn" href="#bakery">Bakery</a>
+    <a class="btn" href="#food">Cafe food</a>
+  </div>
 
   <div class="topRow">
     <div class="shot" aria-label="Cafe and bakery case photo"></div>
@@ -217,16 +227,24 @@
     </div>
   </div>
 
-  <div class="card" style="transform:rotate(-.12deg)">
+  <!-- top picks -->
+  <div class="card" id="top-picks" style="transform:rotate(.08deg)">
+    <h2>Top picks</h2>
+    <div class="item"><div><b>Latte</b><span>Hot or iced.</span></div></div>
+    <div class="item"><div><b>Croissant</b><span>Flaky and buttery.</span></div></div>
+    <div class="item"><div><b>Sandwich special</b><span>Quick lunch favorite.</span></div></div>
+  </div>
+
+  <div class="card" id="coffee" style="transform:rotate(-.12deg)">
     <h2>Coffee</h2>
-    <div class="item"><div><b>House Drip</b><span>Fresh brewed, classic.</span></div><div></div></div>
+    <div class="item"><div><b>House drip</b><span>Fresh brewed, classic.</span></div><div></div></div>
     <div class="item"><div><b>Latte</b><span>Hot or iced, smooth and balanced.</span></div><div></div></div>
     <div class="item"><div><b>Cappuccino</b><span>Foamy, bold, simple.</span></div><div></div></div>
-    <div class="item"><div><b>Cold Brew</b><span>Slow-steeped, easy drinking.</span></div><div></div></div>
+    <div class="item"><div><b>Cold brew</b><span>Slow-steeped, easy drinking.</span></div><div></div></div>
     <div class="item"><div><b>Mocha</b><span>Chocolate plus espresso.</span></div><div></div></div>
   </div>
 
-  <div class="card" style="transform:rotate(.12deg) translateY(2px)">
+  <div class="card" id="bakery" style="transform:rotate(.12deg) translateY(2px)">
     <h2>Bakery</h2>
     <div class="item"><div><b>Croissants</b><span>Flaky, buttery, warm.</span></div><div></div></div>
     <div class="item"><div><b>Muffins</b><span>Rotating daily flavors.</span></div><div></div></div>
@@ -235,7 +253,7 @@
     <div class="item"><div><b>Seasonal specials</b><span>Ask what’s fresh today.</span></div><div></div></div>
   </div>
 
-  <div class="card" style="transform:rotate(-.08deg)">
+  <div class="card" id="food" style="transform:rotate(-.08deg)">
     <h2>Cafe food</h2>
     <div class="item"><div><b>Sandwich special</b><span>Quick lunch favorite.</span></div><div></div></div>
     <div class="item"><div><b>Soup plus bread</b><span>Cozy comfort combo.</span></div><div></div></div>
@@ -244,9 +262,9 @@
   </div>
 
   <div class="cta">
-    <a class="btn primary" href="tel:+1XXXXXXXXXX">Call</a>
+    <a class="btn primary" href="tel:+1(540) 953-1669">Call</a>
     <a class="btn" href="https://maps.google.com/?q=Bollo%27s%20Cafe%20%26%20Bakery" target="_blank" rel="noreferrer">Directions</a>
-    <a class="btn" href="index.html">Back to Home</a>
+    <a class="btn" href="index.html">Back to home</a>
   </div>
 </main>
 
