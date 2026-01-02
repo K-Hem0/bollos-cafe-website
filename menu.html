@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Menu | Bollo’s Cafe & Bakery</title>
+  <meta name="description" content="Menu highlights for Bollo’s Cafe & Bakery in Blacksburg." />
+  <style>
+    :root{--bg:#FAF7F2;--ink:#1A1A1A;--muted:#5A5A5A;--card:#fff;--line:#E7DED4;--accent:#7A4E2D;--radius:18px;--max:900px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:18px}
+    header{position:sticky;top:0;background:rgba(250,247,242,.92);backdrop-filter: blur(10px);border-bottom:1px solid var(--line)}
+    .nav{max-width:var(--max);margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .nav b{font-family:Georgia,serif;font-size:20px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:650;font-size:14px}
+    .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+    h1{margin:10px 0 6px;font-family:Georgia,serif;font-size:36px}
+    .sub{margin:0 0 14px;color:var(--muted)}
+    .card{border:1px solid var(--line);background:var(--card);border-radius:var(--radius);padding:16px;margin:12px 0}
+    .card h2{margin:0 0 10px;font-family:Georgia,serif;font-size:22px}
+    .item{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+    .item:first-of-type{border-top:none;padding-top:0}
+    .item b{display:block}
+    .item span{color:var(--muted);font-size:13px;line-height:1.35}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html"><b>Bollo’s</b></a>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">
+      <a class="btn" href="index.html#visit">Directions</a>
+      <a class="btn primary" href="tel:+1XXXXXXXXXX">Call to Order</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Menu highlights</h1>
+  <p class="sub">Short, clean demo version. Expand later with full menu and photos.</p>
+
+  <div class="card">
+    <h2>Coffee</h2>
+    <div class="item"><div><b>House Drip</b><span>Fresh brewed, classic.</span></div><div></div></div>
+    <div class="item"><div><b>Latte</b><span>Hot or iced.</span></div><div></div></div>
+    <div class="item"><div><b>Cappuccino</b><span>Foamy and bold.</span></div><div></div></div>
+    <div class="item"><div><b>Cold Brew</b><span>Smooth, low acidity.</span></div><div></div></div>
+    <div class="item"><div><b>Mocha</b><span>Chocolate + espresso.</span></div><div></div></div>
+  </div>
+
+  <div class="card">
+    <h2>Bakery</h2>
+    <div class="item"><div><b>Croissants</b><span>Flaky, buttery.</span></div><div></div></div>
+    <div class="item"><div><b>Muffins</b><span>Rotating daily flavors.</span></div><div></div></div>
+    <div class="item"><div><b>Cookies</b><span>Soft, chewy classics.</span></div><div></div></div>
+    <div class="item"><div><b>Bars</b><span>Brownies and more.</span></div><div></div></div>
+    <div class="item"><div><b>Seasonal Specials</b><span>Ask what’s fresh today.</span></div><div></div></div>
+  </div>
+
+  <div class="card">
+    <h2>Cafe food</h2>
+    <div class="item"><div><b>Sandwich Special</b><span>Quick lunch favorite.</span></div><div></div></div>
+    <div class="item"><div><b>Soup + Bread</b><span>Cozy combo.</span></div><div></div></div>
+    <div class="item"><div><b>Salad Option</b><span>Light, fresh.</span></div><div></div></div>
+    <div class="item"><div><b>Breakfast Item</b><span>Grab-and-go.</span></div><div></div></div>
+  </div>
+
+  <div class="cta">
+    <a class="btn primary" href="tel:+1XXXXXXXXXX">Call</a>
+    <a class="btn" href="https://maps.google.com/?q=Bollo%27s%20Cafe%20%26%20Bakery" target="_blank" rel="noreferrer">Directions</a>
+  </div>
+</main>
+
+</body>
+</html>
