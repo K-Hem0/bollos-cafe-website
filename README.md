@@ -1,2 +1,2 @@
-# bollos-cafe-website
-Demo website concept for Bollo’s Cafe &amp; Bakery. Mobile-first, fast, and easy to expand.
+Demo website concept for Bollo’s Cafe & Bakery.
+Mobile-first, fast-loading, and easy to expand.
