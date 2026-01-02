@@ -448,46 +448,52 @@
   </section>
 
   <section class="section" id="visit">
-    <div class="titleRow">
-      <h2>Come by</h2>
-      <p>Hours, location, contact.</p>
-    </div>
+  <div class="titleRow">
+    <h2>Come by</h2>
+    <p>Hours, location, contact.</p>
+  </div>
 
-    <div class="split">
-      <div class="card visitCard" style="transform:rotate(-.12deg)">
-        <div style="position:relative;z-index:1">
-          <b>Hours</b>
-          <p>
-            Mon: 7 AM–5 PM <br>
-            Tue: 7 AM–5 PM <br>
-            Wed: 7 AM–5 PM <br>
-            Thu: 7 AM–5 PM <br>
-            Fri: 7 AM–5 PM <br>
-            Sat: 7 AM–5 PM <br>
-            Sun: 7 AM–5 PM
-          </p>
-          <div class="rule"></div>
-          <p style="margin-top:0">If hours change seasonally, we can keep this updated.</p>
-        </div>
-      </div>
+  <div class="visitGrid">
+    <div class="card visitMain" style="transform:rotate(-.10deg)">
+      <div style="position:relative;z-index:1">
+        <div class="visitTop">
+          <div>
+            <h3 class="visitTitle">Visit Bollo’s</h3>
+            <div class="visitMeta">
+              206 Draper Rd NW, Blacksburg, VA 24060<br>
+              <a href="tel:+15409531669">(540) 953-1669</a> •
+              <a href="https://instagram.com/bolloscafe" target="_blank" rel="noreferrer">@bolloscafe</a>
+            </div>
 
-      <div class="card visitCard" style="transform:rotate(.14deg) translateY(2px)">
-        <div style="position:relative;z-index:1">
-          <b>Location</b>
-          <p>
-            Address: 206 Draper Rd NW, Blacksburg, VA 24060 <br>
-            Phone: <a href="tel:+15409531669">(540) 953-1669</a><br>
-            Instagram: <a href="#" target="_blank" rel="noreferrer">@bolloscafe</a>
-          </p>
-
-          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn primary" href="https://maps.google.com/?q=Bollo%27s%20Cafe%20%26%20Bakery" target="_blank" rel="noreferrer">Open in Maps</a>
-            <a class="btn" href="menu.html">View Menu</a>
+            <div class="visitActions">
+              <a class="btn primary" href="https://maps.google.com/?q=206%20Draper%20Rd%20NW%2C%20Blacksburg%2C%20VA%2024060" target="_blank" rel="noreferrer">Directions</a>
+              <a class="btn" href="menu.html">Menu</a>
+              <a class="btn" href="tel:+15409531669">Call</a>
+            </div>
           </div>
         </div>
+
+        <div class="hoursGrid" aria-label="Hours">
+          <div class="hoursRow"><b>Mon</b><span>7 AM–5 PM</span></div>
+          <div class="hoursRow"><b>Tue</b><span>7 AM–5 PM</span></div>
+          <div class="hoursRow"><b>Wed</b><span>7 AM–5 PM</span></div>
+          <div class="hoursRow"><b>Thu</b><span>7 AM–5 PM</span></div>
+          <div class="hoursRow"><b>Fri</b><span>7 AM–5 PM</span></div>
+          <div class="hoursRow"><b>Sat</b><span>7 AM–5 PM</span></div>
+          <div class="hoursRow"><b>Sun</b><span>7 AM–5 PM</span></div>
+        </div>
       </div>
     </div>
-  </section>
+
+    <div class="mapCard" aria-label="Map preview">
+      <div class="mapOverlay">
+        <a class="btn primary" href="https://maps.google.com/?q=206%20Draper%20Rd%20NW%2C%20Blacksburg%2C%20VA%2024060" target="_blank" rel="noreferrer">Open Maps</a>
+        <a class="btn" href="tel:+15409531669">Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer>
