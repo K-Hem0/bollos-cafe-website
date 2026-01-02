@@ -27,7 +27,102 @@
       --img-bakerycase: url("https://source.unsplash.com/8DsyYTdVMNo/1200x900");
       --img-sandwich: url("https://source.unsplash.com/Mac7Kk1ndsw/1200x900");
     }
+  .visitGrid{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:12px;
+  align-items:stretch;
+}
 
+.visitMain{
+  padding:16px;
+}
+
+.visitTop{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.visitTitle{
+  margin:0;
+  font-family: Georgia,"Times New Roman",serif;
+  font-size:22px;
+  letter-spacing:.2px;
+}
+
+.visitMeta{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.5;
+  margin-top:6px;
+}
+
+.visitActions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.hoursGrid{
+  margin-top:12px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:6px 18px;
+  padding-top:12px;
+  border-top:1px solid rgba(214,191,167,.95);
+}
+
+.hoursRow{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.hoursRow b{
+  color:var(--ink);
+  font-weight:700;
+}
+
+.mapCard{
+  border-radius: var(--radius);
+  border: 1px solid rgba(214,191,167,.95);
+  box-shadow: var(--shadow2);
+  overflow:hidden;
+  background:
+    linear-gradient(180deg, rgba(42,30,20,.12), rgba(42,30,20,.04) 35%, rgba(42,30,20,.10)),
+    url("assets/images/map-preview.jpg") center/cover no-repeat;
+  filter: contrast(1.05) saturate(1.06) brightness(.96);
+  min-height: 240px;
+  transform: rotate(.10deg) translateY(2px);
+  position:relative;
+}
+
+.mapCard:after{
+  content:"";
+  position:absolute; inset:0;
+  background: radial-gradient(700px 260px at 30% 15%, rgba(255,255,255,.16), transparent 55%);
+  pointer-events:none;
+}
+
+.mapOverlay{
+  position:absolute;
+  left:12px; right:12px; bottom:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+@media (max-width:900px){
+  .visitGrid{grid-template-columns:1fr}
+  .mapCard{min-height:200px; transform:none}
+}
+    
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
