@@ -3,77 +3,257 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Menu | Bollo’s Cafe & Bakery</title>
-  <meta name="description" content="Menu highlights for Bollo’s Cafe & Bakery in Blacksburg." />
+  <title>Menu Highlights | Bollo’s Cafe & Bakery</title>
+  <meta name="description" content="Menu highlights for Bollo’s Cafe & Bakery in Blacksburg, VA." />
+
   <style>
-    :root{--bg:#FAF7F2;--ink:#1A1A1A;--muted:#5A5A5A;--card:#fff;--line:#E7DED4;--accent:#7A4E2D;--radius:18px;--max:900px}
+    :root{
+      --bg:#F3E6D3;
+      --ink:#2A1E14;
+      --muted:#6B4E3D;
+      --card:#FAF3E8;
+      --accent:#B55A2A;
+      --line:#D6BFA7;
+      --shadow: 0 10px 28px rgba(42,30,20,.12);
+      --shadow2: 0 6px 16px rgba(42,30,20,.10);
+      --radius:10px;
+      --max:960px;
+    }
+
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:var(--bg);
+      font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    }
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:18px}
-    header{position:sticky;top:0;background:rgba(250,247,242,.92);backdrop-filter: blur(10px);border-bottom:1px solid var(--line)}
-    .nav{max-width:var(--max);margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
-    .nav b{font-family:Georgia,serif;font-size:20px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:650;font-size:14px}
-    .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-    h1{margin:10px 0 6px;font-family:Georgia,serif;font-size:36px}
-    .sub{margin:0 0 14px;color:var(--muted)}
-    .card{border:1px solid var(--line);background:var(--card);border-radius:var(--radius);padding:16px;margin:12px 0}
-    .card h2{margin:0 0 10px;font-family:Georgia,serif;font-size:22px}
-    .item{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+
+    body:before{
+      content:"";
+      position:fixed; inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(900px 400px at 15% 0%, rgba(255,255,255,.18), transparent 60%),
+        repeating-linear-gradient(0deg, rgba(42,30,20,.03) 0 1px, transparent 1px 3px);
+      opacity:.55;
+      mix-blend-mode:multiply;
+      z-index:-1;
+    }
+
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(243,230,211,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(214,191,167,.95);
+    }
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+    }
+    .nav b{
+      font-family: Georgia,"Times New Roman",serif;
+      font-size:20px;
+      letter-spacing:.3px;
+    }
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 14px;border-radius:999px;
+      border:1px solid rgba(214,191,167,.95);
+      background: rgba(250,243,232,.85);
+      box-shadow: 0 2px 0 rgba(42,30,20,.08);
+      font-weight:800;
+      font-size:14px;
+      transition: transform .08s ease, box-shadow .12s ease;
+    }
+    .btn:hover{transform: translateY(-1px); box-shadow: 0 4px 10px rgba(42,30,20,.12)}
+    .btn.primary{
+      background: var(--accent);
+      border-color: rgba(181,90,42,.9);
+      color:#fff;
+      box-shadow: 0 3px 0 rgba(42,30,20,.18);
+    }
+
+    h1{
+      margin:10px 0 6px;
+      font-family: Georgia,"Times New Roman",serif;
+      font-size:38px;
+      letter-spacing:.25px;
+    }
+    .sub{
+      margin:0 0 14px;
+      color:var(--muted);
+      line-height:1.55;
+    }
+
+    .topRow{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin:14px 0 10px;
+    }
+    .shot{
+      min-height:190px;
+      border-radius: var(--radius);
+      border:1px solid rgba(214,191,167,.95);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      background: linear-gradient(180deg, rgba(42,30,20,.14), transparent 50%),
+                  url("assets/images/menu-hero.jpg") center/cover no-repeat;
+      filter: contrast(1.05) saturate(1.10) brightness(.95);
+      transform: rotate(-.12deg);
+    }
+    .aside{
+      border-radius: var(--radius);
+      border:1px solid rgba(214,191,167,.95);
+      background: rgba(250,243,232,.92);
+      box-shadow: var(--shadow2);
+      padding:14px 14px 12px;
+      transform: rotate(.12deg) translateY(2px);
+      position:relative;
+    }
+    .aside:after{
+      content:"";
+      position:absolute; inset:0;
+      border-radius: var(--radius);
+      background: repeating-linear-gradient(135deg, rgba(42,30,20,.03) 0 1px, transparent 1px 6px);
+      opacity:.22;
+      pointer-events:none;
+      mix-blend-mode:multiply;
+    }
+    .aside b{display:block;margin-bottom:6px;position:relative;z-index:1}
+    .aside p{margin:0;color:var(--muted);line-height:1.55;position:relative;z-index:1}
+
+    .card{
+      border:1px solid rgba(214,191,167,.95);
+      background: rgba(250,243,232,.92);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow2);
+      padding:14px 14px 10px;
+      margin:12px 0;
+      position:relative;
+    }
+    .card:after{
+      content:"";
+      position:absolute; inset:0;
+      border-radius: var(--radius);
+      background: repeating-linear-gradient(135deg, rgba(42,30,20,.03) 0 1px, transparent 1px 6px);
+      opacity:.18;
+      pointer-events:none;
+      mix-blend-mode:multiply;
+    }
+
+    .card h2{
+      margin:0 0 10px;
+      font-family: Georgia,"Times New Roman",serif;
+      font-size:22px;
+      letter-spacing:.15px;
+      position:relative;z-index:1;
+    }
+
+    .item{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      padding:10px 0;
+      border-top:1px solid rgba(214,191,167,.95);
+      position:relative;z-index:1;
+    }
     .item:first-of-type{border-top:none;padding-top:0}
     .item b{display:block}
     .item span{color:var(--muted);font-size:13px;line-height:1.35}
-    .cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+
+    .cta{
+      display:flex;gap:10px;flex-wrap:wrap;
+      margin:16px 0 6px;
+    }
+
+    footer{
+      border-top:1px solid rgba(214,191,167,.95);
+      padding:16px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media (max-width:860px){
+      .topRow{grid-template-columns:1fr}
+      h1{font-size:32px}
+      .shot{min-height:210px}
+    }
   </style>
 </head>
-<body>
 
+<body>
 <header>
   <div class="nav">
-    <a href="index.html"><b>Bollo’s</b></a>
+    <a href="index.html" aria-label="Back to home"><b>Bollo’s</b></a>
     <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">
       <a class="btn" href="index.html#visit">Directions</a>
-      <a class="btn primary" href="tel:+1XXXXXXXXXX">Call to Order</a>
+      <a class="btn primary" href="tel:+1XXXXXXXXXX">Call</a>
     </div>
   </div>
 </header>
 
 <main class="wrap">
   <h1>Menu highlights</h1>
-  <p class="sub">Short, clean demo version. Expand later with full menu and photos.</p>
+  <p class="sub">
+    Short and clean for the demo. The full menu can be added with photos and updates anytime.
+  </p>
 
-  <div class="card">
+  <div class="topRow">
+    <div class="shot" aria-label="Cafe and bakery case photo"></div>
+    <div class="aside">
+      <b>Good to know</b>
+      <p>
+        Keep this page simple for mobile. Add prices later if you want. Link online ordering here if you have it.
+      </p>
+      <p style="margin-top:10px">
+        Best first upgrade: photo sections that match the bakery case and the vibe inside.
+      </p>
+    </div>
+  </div>
+
+  <div class="card" style="transform:rotate(-.12deg)">
     <h2>Coffee</h2>
     <div class="item"><div><b>House Drip</b><span>Fresh brewed, classic.</span></div><div></div></div>
-    <div class="item"><div><b>Latte</b><span>Hot or iced.</span></div><div></div></div>
-    <div class="item"><div><b>Cappuccino</b><span>Foamy and bold.</span></div><div></div></div>
-    <div class="item"><div><b>Cold Brew</b><span>Smooth, low acidity.</span></div><div></div></div>
-    <div class="item"><div><b>Mocha</b><span>Chocolate + espresso.</span></div><div></div></div>
+    <div class="item"><div><b>Latte</b><span>Hot or iced, smooth and balanced.</span></div><div></div></div>
+    <div class="item"><div><b>Cappuccino</b><span>Foamy, bold, simple.</span></div><div></div></div>
+    <div class="item"><div><b>Cold Brew</b><span>Slow-steeped, easy drinking.</span></div><div></div></div>
+    <div class="item"><div><b>Mocha</b><span>Chocolate plus espresso.</span></div><div></div></div>
   </div>
 
-  <div class="card">
+  <div class="card" style="transform:rotate(.12deg) translateY(2px)">
     <h2>Bakery</h2>
-    <div class="item"><div><b>Croissants</b><span>Flaky, buttery.</span></div><div></div></div>
+    <div class="item"><div><b>Croissants</b><span>Flaky, buttery, warm.</span></div><div></div></div>
     <div class="item"><div><b>Muffins</b><span>Rotating daily flavors.</span></div><div></div></div>
-    <div class="item"><div><b>Cookies</b><span>Soft, chewy classics.</span></div><div></div></div>
+    <div class="item"><div><b>Cookies</b><span>Soft classics, easy to share.</span></div><div></div></div>
     <div class="item"><div><b>Bars</b><span>Brownies and more.</span></div><div></div></div>
-    <div class="item"><div><b>Seasonal Specials</b><span>Ask what’s fresh today.</span></div><div></div></div>
+    <div class="item"><div><b>Seasonal specials</b><span>Ask what’s fresh today.</span></div><div></div></div>
   </div>
 
-  <div class="card">
+  <div class="card" style="transform:rotate(-.08deg)">
     <h2>Cafe food</h2>
-    <div class="item"><div><b>Sandwich Special</b><span>Quick lunch favorite.</span></div><div></div></div>
-    <div class="item"><div><b>Soup + Bread</b><span>Cozy combo.</span></div><div></div></div>
-    <div class="item"><div><b>Salad Option</b><span>Light, fresh.</span></div><div></div></div>
-    <div class="item"><div><b>Breakfast Item</b><span>Grab-and-go.</span></div><div></div></div>
+    <div class="item"><div><b>Sandwich special</b><span>Quick lunch favorite.</span></div><div></div></div>
+    <div class="item"><div><b>Soup plus bread</b><span>Cozy comfort combo.</span></div><div></div></div>
+    <div class="item"><div><b>Salad option</b><span>Light, fresh, simple.</span></div><div></div></div>
+    <div class="item"><div><b>Breakfast item</b><span>Grab-and-go friendly.</span></div><div></div></div>
   </div>
 
   <div class="cta">
     <a class="btn primary" href="tel:+1XXXXXXXXXX">Call</a>
     <a class="btn" href="https://maps.google.com/?q=Bollo%27s%20Cafe%20%26%20Bakery" target="_blank" rel="noreferrer">Directions</a>
+    <a class="btn" href="index.html">Back to Home</a>
   </div>
 </main>
 
+<footer>
+  <div class="wrap">
+    Demo site concept for Bollo’s. Built by Cornelius.
+  </div>
+</footer>
 </body>
 </html>
